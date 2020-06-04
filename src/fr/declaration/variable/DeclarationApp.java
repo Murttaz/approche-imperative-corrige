@@ -12,7 +12,7 @@ public class DeclarationApp {
 		double d = 6.4D;
 		char c = 'c';
 		boolean myBool = true;
-		
+
 		System.out.println(b);
 		System.out.println(s);
 		System.out.println(i);
@@ -21,8 +21,8 @@ public class DeclarationApp {
 		System.out.println(d);
 		System.out.println(c);
 		System.out.println(myBool);
-		
-		String randomString = "Voici le résultat d’un calcul :\n 1+5=6";
+
+		String randomString = "Voici le rÃ©sultat d'un calcul :\n 1+5=6";
 		System.out.println(randomString);
 
 	}
