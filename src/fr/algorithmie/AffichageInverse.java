@@ -1,35 +1,44 @@
 package fr.algorithmie;
 
+/**
+ * Exercice AffichageInverse
+ * 
+ * @author DIGINAMIC
+ *
+ */
 public class AffichageInverse {
 
+	/**
+	 * Méthode exécutable
+	 * 
+	 * @param args non utilisés ici
+	 */
 	public static void main(String[] args) {
-		int[] array = { 1, 15, -3, 0, 8, 7, 4, -2, 28, 7, -1, 17, 2, 3, 0, 14, -4 };
-		int array_length = array.length;
 
-		/* Affichage normal de array. */
-		System.out.println("Affichage normal");
+		// Déclaration du tableau
+		int[] tab = { 1, 15, -3, 0, 8, 7, 4, -2, 28, 7, -1, 17, 2, 3, 0, 14, -4 };
 
-		for (int i = 0; i < array_length; ++i) {
-			System.out.println(array[i]);
+		// Déclaration d'une variable stockant la longueur du tableau (facultatif)
+		int longtab = tab.length;
+
+		// Afficher l’ensemble des éléments du tableau grâce à une boucle
+		for (int i = 0; i < longtab; i++) {
+			System.out.print(tab[i] + " ");
 		}
 
-		/* Affichage inverse de array. */
-		System.out.println("\nAffichage inverse");
+		// Saut de ligne
+		System.out.println();
 
-		for (int i = array_length - 1; i >= 0; --i) {
-			System.out.println(array[i]);
+		// Afficher l’ensemble des éléments dans l’ordre inverse du tableau
+		for (int i = longtab - 1; i >= 0; i--) {
+			System.out.print(tab[i] + " ");
 		}
 
-		/* Copie des éléments de array dans arrayCopy. */
-
-		System.out.println("\nVérification arrayCopy");
-
-		int[] arrayCopy = new int[array_length];
-		for (int i = 0; i < array_length; ++i) {
-			arrayCopy[i] = array[i];
-
-			/* Vérification en même temps avec l'affichage de arrayCopy. */
-			System.out.println(arrayCopy[i]);
+		// Créer un tableau arrayCopy et copier tous les éléments de array dans
+		// arrayCopy
+		int[] arrayCopy = new int[tab.length];
+		for (int i = 0; i < longtab; i++) {
+			arrayCopy[i] = tab[i];
 		}
 
 	}

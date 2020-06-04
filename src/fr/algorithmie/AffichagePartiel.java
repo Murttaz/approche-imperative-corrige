@@ -1,44 +1,58 @@
 package fr.algorithmie;
 
+/**
+ * @author DIGINAMIC
+ *
+ */
 public class AffichagePartiel {
 
+	/**
+	 * Méthode exécutable
+	 * 
+	 * @param args non utilisés ici
+	 */
 	public static void main(String[] args) {
-		int[] array = { 1, 15, -3, 0, 8, 7, 4, -2, 28, 7, -1, 17, 2, 3, 0, 14, -4 };
-		int array_length = array.length;
 
-		/* Affiche que les entiers > 3 contenus dans array. */
+		// Déclaration du tableau
+		int[] tab = { 1, 15, -3, 0, 8, 7, 4, -2, 28, 7, -1, 17, 2, 3, 0, 14, -4 };
 
-		System.out.print("Nombres > 3 dans array : ");
-		for (int i = 0; i < array_length; ++i) {
-			if (array[i] > 3) {
-				System.out.print(array[i] + " ");
+		// Combiner une boucle et un test de manière à n’afficher que les entiers
+		// supérieurs à 3
+		for (int i = 0; i < tab.length; i++) {
+			if (tab[i] > 3) {
+				System.out.print(tab[i] + " ");
 			}
 		}
 
-		/* Affiche que les entiers pairs contenus dans array. */
+		// Saut de ligne
+		System.out.println();
 
-		System.out.print("\nNombres pairs dans array : ");
-		for (int i = 0; i < array_length; ++i) {
-			if (array[i] % 2 == 0) {
-				System.out.print(array[i] + " ");
+		// Combiner une boucle et un test de manière à n’afficher que les entiers pairs
+		for (int i = 0; i < tab.length; i++) {
+			if (tab[i] % 2 == 0) {
+				System.out.print(tab[i] + " ");
 			}
 		}
 
-		/* Affiche que les entiers d'index pairs contenus dans array. */
+		// Saut de ligne
+		System.out.println();
 
-		System.out.print("\nNombres d'index pairs dans array : ");
-		for (int i = 0; i < array_length; ++i) {
+		// Combiner une boucle et un test de manière à n’afficher que les valeurs
+		// correspondant aux index pairs
+		for (int i = 0; i < tab.length; i++) {
 			if (i % 2 == 0) {
-				System.out.print(array[i] + " ");
+				System.out.print(i + " ");
 			}
 		}
 
-		/* Affiche que les entiers impairs contenus dans array. */
+		// Saut de ligne
+		System.out.println();
 
-		System.out.print("\nNombres impairs dans array : ");
-		for (int i = 0; i < array_length; ++i) {
-			if ((array[i] % 2 == 1) || (array[i] % 2 == -1)) {
-				System.out.print(array[i] + " ");
+		// Combiner une boucle et un test de manière à n’afficher que les entiers
+		// impairs
+		for (int i = 0; i < tab.length; i++) {
+			if (tab[i] % 2 == 1) {
+				System.out.print(tab[i] + " ");
 			}
 		}
 

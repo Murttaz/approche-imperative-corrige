@@ -3,31 +3,41 @@ package fr.algorithmie;
 // Import de la classe Scanner
 import java.util.Scanner;
 
+/**
+ * @author DIGINAMIC
+ *
+ */
 public class InteractifSommeArithmetique {
 
+	/**
+	 * Méthode exécutable
+	 * 
+	 * @param args non utilisés ici
+	 */
 	public static void main(String[] args) {
-		/*
-		 * Exercice 13 : Somme arithmétique intéractive Ecrire un programme qui demande
-		 * un nombre à l’utilisateur puis calcule la somme de tous les entiers compris
-		 * entre 1 et ce nombre. Exemple si l’utilisateur saisit 5, le programme
-		 * affiche: 15
-		 */
-		int nombre = 0;
-		int resultat = 0;
-		Scanner saisie = new Scanner(System.in);
+		// On initialise le scanner qui va nous servir à interagir avec l'utilisateur
+		Scanner entree = new Scanner(System.in);
 
-		System.out.print("Entrez un nombre : ");
-		nombre = saisie.nextInt();
+		// On affiche le message précisant que l'utilisateur doit saisir un nombre
+		System.out.println("Saisissez un nombre:");
 
-		saisie.close();
+		// On pose maintenant la question à l'utilisateur.
+		int nb = entree.nextInt();
 
-		for (int i = 1; i <= nombre; i++) {
+		// On déclare une variable qui va permettre de stocker la somme arithmétique
+		int sommeArithm = 0;
 
-			resultat += i;
-
+		// On fait une boucle indexée de 1 au nombre sélectionné et on ajoute l'index à
+		// la somme
+		for (int i = 1; i <= nb; i++) {
+			sommeArithm += i;
 		}
 
-		System.out.println("La somme de tous les entiers compris entre 1 et " + nombre + " est : " + resultat);
+		// On affiche le résultat final
+		System.out.println("Somme arithmérique=" + sommeArithm);
+
+		// On ferme le scanner
+		entree.close();
 	}
 
 }

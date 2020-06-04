@@ -1,24 +1,36 @@
 package fr.algorithmie;
 
+/**
+ * @author DIGINAMIC
+ *
+ */
 public class CalculMoyenne {
 
+	/**
+	 * Méthode exécutable
+	 * 
+	 * @param args non utilisés ici
+	 */
 	public static void main(String[] args) {
-		// Variables
-		int[] array = { 1, 15, -3, 0, 8, 7, 4, -2, 28, 7, -1, 17, 2, 3, 0, 14, -4 };
-		int compteur = 0;
-		double total = 0;
 
-		// La moyenne
-		while (array.length > compteur) {
-			total = total + array[compteur];
-			compteur++;
+		// Déclaration du tableau
+		int[] tab = { 1, 15, -3, 0, 8, 7, 4, -2, 28, 7, -1, 17, 2, 3, 0, 14, -4 };
+
+		// Déclarations des variables somme et moyenne
+		int somme = 0;
+		float moyenne = 0.0f;
+
+		// On calcule la somme de tous les éléments via une boucle
+		for (int i = 0; i < tab.length; i++) {
+			somme += tab[i];
 		}
 
-		System.out.println("Total :" + total);
-		double moyenne = total / array.length;
-		System.out.println("Nombre d'éléments :" + array.length);
-		System.out.println("Moyenne :" + moyenne);
+		// Puis on calcule la moyenne en divisant la somme précédente par le nombre
+		// d'éléments du tableau
+		moyenne = (float) somme / (float) tab.length;
 
+		// Affichage de la moyenne
+		System.out.println(moyenne);
 	}
 
 }

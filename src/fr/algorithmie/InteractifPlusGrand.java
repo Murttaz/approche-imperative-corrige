@@ -3,33 +3,41 @@ package fr.algorithmie;
 // Import de la classe Scanner
 import java.util.Scanner;
 
+/**
+ * @author DIGINAMIC
+ *
+ */
 public class InteractifPlusGrand {
 
+	/**
+	 * M√©thode ex√©cutable
+	 * 
+	 * @param args non utilis√©s ici
+	 */
 	public static void main(String[] args) {
-		
-		// CrÈation d'une variable saisie de type Scanner
-		Scanner saisie = new Scanner(System.in);
-		
-		// CrÈation d'un tableau allant contenir les 10 nombres
-		int[] numbers = new int[10];
-						
-		// Demande ‡ l'utilisateur de saisir 10 nombres
-		System.out.println("Veuillez saisir 10 nombres et appuyer sur la touche Return :");
-		
-		// Stockage des nombres dans le tableau numbers
-		for (int i = 0; i < numbers.length; i++) {
-			numbers[i] = saisie.nextInt();
-		}
-		
-		// Affichage du plus grand des 10 nombres
-		int nbMax = numbers[0]; // valeur maximale du tableau, initialisÈe au premier ÈlÈment du tableau
-		for (int i = 1; i < numbers.length; i++) {
-			if (numbers[i] > nbMax) {
-				nbMax = numbers[i];
+
+		// On initialise le scanner qui va nous servir √† interagir avec l'utilisateur
+		Scanner entree = new Scanner(System.in);
+
+		// On initialise la variable max avec la valeur la plus petite possible
+		int max = Integer.MIN_VALUE;
+
+		// On ex√©cute une boucle de 10 r√©p√©titions
+		for (int i = 0; i < 10; i++) {
+
+			// On affiche un message invitant l'utilisateur √† saisir une valeur au clavier
+			System.out.println("Saisisssez un nombre:");
+
+			// On attend la saisie de l'utilisateur et on la stocke dans nb
+			int nb = entree.nextInt();
+
+			// Si nb est plus grand que max, alors max vaut d√©sormais nb
+			if (nb > max) {
+				max = nb;
 			}
 		}
-		System.out.println(nbMax);
 
+		System.out.println("La valeur la plus grande saisie est :" + max);
+		entree.close();
 	}
-
 }

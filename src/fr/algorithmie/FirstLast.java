@@ -1,26 +1,33 @@
 package fr.algorithmie;
 
+/**
+ * @author DIGINAMIC
+ *
+ */
 public class FirstLast {
 
-	/*
-	 * Calcul de la valeur bool�enne qui contr�le le tableau de la sorte : - elle
-	 * vaut true si le tableau est de longueur strictement sup�rieure � 1 et que le
-	 * premier et le dernier �l�ment du tableau ont la m�me valeur - elle vaut false
-	 * dans les autres cas
+	/**
+	 * Méthode exécutable
 	 * 
+	 * @param args non utilisés ici
 	 */
 	public static void main(String[] args) {
-		// Déclaration tableau d'entiers
-		int[] tab1 = { 3, 6, 8, 4, 8, 3 };
-		boolean marqueur = false;
 
-		// Si détection tableau 1er et dernier éléments égaux, marqueur = true
-		if ((tab1.length > 0) && (tab1[0] == tab1[tab1.length - 1] && tab1[tab1.length - 1] == tab1[0])) {
-			marqueur = true;
+		// Déclaration du tableau
+		int[] tab = { 1, 3, 5, 1 };
+
+		// déclaration de la variable firstLast qui va contrôler le tableau. Par
+		// défaut on l'initialise à false.
+		boolean firstLast = false;
+
+		// On teste le cas true uniquement: vaut true si le tableau est de
+		// longueur strictement supérieure à 1 et que le premier et le dernier
+		// élément du tableau ont la même valeur
+		if (tab.length > 0 && tab[0] == tab[tab.length - 1]) {
+			firstLast = true;
 		}
-		// Inutile de faire un esle, le marqueur est false par défaut
-		System.out.println("Etat du boolean : " + marqueur);
 
+		System.out.println(firstLast);
 	}
 
 }

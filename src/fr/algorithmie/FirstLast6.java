@@ -1,19 +1,31 @@
 package fr.algorithmie;
 
+/**
+ * @author DIGINAMIC
+ *
+ */
 public class FirstLast6 {
 
+	/**
+	 * Méthode exécutable
+	 * 
+	 * @param args non utilisés ici
+	 */
 	public static void main(String[] args) {
 
-		int[] array = { 52, 58, 8745, 2, -8548, 56, 6 };
+		// Déclaration du tableau
+		int[] tab = { 4, 3, 6, 1, 6 };
 
-		/*
-		 * On calcule une valeur booléenne qui contrôle le tableau de la sorte : o elle
-		 * vaut true si le tableau a au moins 1 élément et si le premier élément ou le
-		 * dernier élément vaut 6. o elle vaut false dans les autres cas
-		 */
-		boolean b = array.length > 0 && ((array[0] == 6) || (array[array.length - 1] == 6));
+		// Déclaration du booléen de résultat: on l'initialise à false et on ne teste
+		// que le cas true
+		boolean firstLast6 = false;
 
-		System.out.println(b);
+		// Réalisation du test true: si le tableau a au moins 1 élément ET (si le
+		// premier élément OU le dernier élément vaut 6)
+		if (tab.length >= 1 && (tab[0] == 6 || tab[tab.length - 1] == 6)) {
+			firstLast6 = true;
+		}
+
+		System.out.println(firstLast6);
 	}
-
 }

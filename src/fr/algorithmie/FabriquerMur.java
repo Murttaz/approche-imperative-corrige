@@ -1,7 +1,16 @@
 package fr.algorithmie;
 
+/**
+ * @author DIGINAMIC
+ *
+ */
 public class FabriquerMur {
 
+	/**
+	 * Méthode exécutable
+	 * 
+	 * @param args non utilisés ici
+	 */
 	public static void main(String[] args) {
 
 		// Tests de vérification
@@ -21,25 +30,37 @@ public class FabriquerMur {
 
 	static boolean fabriquerMur(int nbSmall, int nbBig, int longueur) {
 		boolean resultat = false;
-		int mur = 0;
 
-		// parcours des briques de longueurs 5
-		for (int i = 0; i < nbBig; i++) {
+		// Si la longueur est supérieure à la longueur totale max qu'on peut produire
+		// avec les briques dont on dispose alors le résultat est false
+		// Par exemple, il est impossible de construire un mur de 50 mètres avec 1
+		// brique de 5m et 1 brique de 1m.
+		if (longueur > nbSmall + nbBig * 5) {
+			resultat = false;
+		} else {
+			// Si nous avons assez de briques, il faut commencer par calculer le nombre
+			// maximum de briques de 5m qu'on peut utiliser.
+			// Par exemple, si on a une longueur de 9m à fabriquer et qu'on a 2 briques de
+			// 5m, on ne pourra pas utiliser les 2 briques
+			// mais seulement 1 seule.
+			// Ce nombre max est calculé par la division entière de la longueur par 5
+			// Dans ce cas, si par exemple la longueur est égale à 9 alors nbMaxBriquesBig
+			// est égal à 1
+			int nbMaxBriquesBig = longueur / 5;
 
-			if ((mur + 5) <= longueur) {
-				mur += 5;
-			}
+			// Ensuite on calcule la longueur max qu'on peut produire avec ce nombre max:
+			// Sur la base de notre exemple précédent, on obtient la valeur de 5 mètres
+			int longueurMaxBig = nbMaxBriquesBig * 5;
+
+			// On calcule alors la longueur restant à produire une fois les briques de 5m
+			// utilisées
+			int longueurRestante = longueur - longueurMaxBig;
+
+			// Si le nombre de petites briques est supérieur ou égal à cette longueur alors
+			// le résultat est true, sinon il est false
+
+			resultat = nbSmall >= longueurRestante;
 		}
-
-		// parcours des briques de longueur 1
-		for (int i = 0; i < nbSmall; i++) {
-
-			if ((mur + 1) <= longueur) {
-				mur++;
-			}
-		}
-
-		resultat = (mur == longueur);
 
 		return resultat;
 	}

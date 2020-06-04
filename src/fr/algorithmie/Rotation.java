@@ -2,16 +2,32 @@ package fr.algorithmie;
 
 public class Rotation {
 
+	/**
+	 * Méthode exécutable
+	 * 
+	 * @param args non utilisés ici
+	 */
 	public static void main(String[] args) {
-		int[] array = { 0, 2, 4, 6 };
-		int[] arrayRetation = new int[array.length];
 
-		// rotation à droite des éléments
-		for (int i = 0; i < array.length; i++) {
-			arrayRetation[(i + 1) % array.length] = array[i];
-			arrayRetation[0] = array[array.length - 1];
-			System.out.println("le min est :" + arrayRetation[i]);
+		// Déclaration d'un tableau exemple
+		int[] tab = { 12, 4, 8, -1 };
+
+		// Initialisation d'une variable tampon qui stocke l'élément le plus à droite
+		int swap = tab[tab.length - 1];
+
+		// décalage de tous les éléments vers la droite
+		for (int i = tab.length - 2; i >= 0; i--) {
+			tab[i + 1] = tab[i];
+		}
+
+		// Stockage à gauche de l'élément anciennement le plus à droite
+		tab[0] = swap;
+
+		// Affichage
+		for (int valeur : tab) {
+			System.out.print(valeur + " ");
 		}
 
 	}
+
 }
