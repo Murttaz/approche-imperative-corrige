@@ -1,6 +1,8 @@
 package fr.algorithmie;
 
 /**
+ * Exercice FirstLast6
+ * 
  * @author DIGINAMIC
  *
  */

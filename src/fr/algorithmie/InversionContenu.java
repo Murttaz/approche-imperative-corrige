@@ -1,5 +1,11 @@
 package fr.algorithmie;
 
+/**
+ * Exercice InversionContenu
+ * 
+ * @author DIGINAMIC
+ *
+ */
 public class InversionContenu {
 
 	/**

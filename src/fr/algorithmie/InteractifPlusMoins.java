@@ -4,6 +4,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 /**
+ * Exercice InteractifPlusMoins
+ * 
  * @author DIGINAMIC
  *
  */

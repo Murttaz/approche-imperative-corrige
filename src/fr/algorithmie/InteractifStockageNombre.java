@@ -3,6 +3,8 @@ package fr.algorithmie;
 import java.util.Scanner;
 
 /**
+ * Exercice InteractifStockageNombre
+ * 
  * @author DIGINAMIC
  *
  */

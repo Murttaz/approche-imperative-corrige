@@ -1,6 +1,8 @@
 package fr.algorithmie;
 
 /**
+ * Exercice CalculMoyenne
+ * 
  * @author DIGINAMIC
  *
  */

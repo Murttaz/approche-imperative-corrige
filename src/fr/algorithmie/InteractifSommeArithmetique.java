@@ -4,6 +4,8 @@ package fr.algorithmie;
 import java.util.Scanner;
 
 /**
+ * Exercice InteractifSommeArithmetique
+ * 
  * @author DIGINAMIC
  *
  */

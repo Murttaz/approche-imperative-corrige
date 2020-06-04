@@ -1,6 +1,8 @@
 package fr.algorithmie;
 
 /**
+ * Exercice AffichagePartiel
+ * 
  * @author DIGINAMIC
  *
  */

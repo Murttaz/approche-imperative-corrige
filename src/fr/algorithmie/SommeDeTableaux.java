@@ -1,5 +1,11 @@
 package fr.algorithmie;
 
+/**
+ * Exercice SommeDeTableaux
+ * 
+ * @author DIGINAMIC
+ *
+ */
 public class SommeDeTableaux {
 
 	/**

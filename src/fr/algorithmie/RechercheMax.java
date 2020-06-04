@@ -1,5 +1,11 @@
 package fr.algorithmie;
 
+/**
+ * Exercice RechercheMax
+ * 
+ * @author DIGINAMIC
+ *
+ */
 public class RechercheMax {
 
 	/**

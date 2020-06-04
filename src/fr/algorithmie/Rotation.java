@@ -1,5 +1,11 @@
 package fr.algorithmie;
 
+/**
+ * Exercice Rotation
+ * 
+ * @author DIGINAMIC
+ *
+ */
 public class Rotation {
 
 	/**

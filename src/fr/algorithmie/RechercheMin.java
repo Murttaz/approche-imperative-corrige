@@ -1,5 +1,11 @@
 package fr.algorithmie;
 
+/**
+ * Exercice RechercheMin
+ * 
+ * @author DIGINAMIC
+ *
+ */
 public class RechercheMin {
 
 	/**
