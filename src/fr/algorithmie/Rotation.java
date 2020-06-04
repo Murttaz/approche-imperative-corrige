@@ -3,23 +3,15 @@ package fr.algorithmie;
 public class Rotation {
 
 	public static void main(String[] args) {
-		
-		int[] array = {2, -5, 10, 8, -1, 6}; // tableau d'entiers
-		
-		// Initialisation d'une variable allant prendre pour valeur la dernière valeur du tableau
-		int lastValue = array[array.length-1];
-		
-		// Rotation à droite des éléments du tableau
-		for (int i = array.length - 1; i > 0; i--) {
-			array[i] = array[i-1];
+		int[] array = { 0, 2, 4, 6 };
+		int[] arrayRetation = new int[array.length];
+
+		// rotation Ã  droite des Ã©lÃ©ments
+		for (int i = 0; i < array.length; i++) {
+			arrayRetation[(i + 1) % array.length] = array[i];
+			arrayRetation[0] = array[array.length - 1];
+			System.out.println("le min est :" + arrayRetation[i]);
 		}
-		array[0] = lastValue;
-		int i = 0; // index de parcours du tableau
-	    while (i < array.length) {
-	    	System.out.println(array[i]);
-	    	i++;
-	    }
 
 	}
-
 }

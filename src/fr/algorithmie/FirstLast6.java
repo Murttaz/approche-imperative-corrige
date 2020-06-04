@@ -3,25 +3,17 @@ package fr.algorithmie;
 public class FirstLast6 {
 
 	public static void main(String[] args) {
-		
-		int[] array = {2, -5, 10, 8, -1, 6}; // tableau d'entiers
-		boolean control = true; // initialisation d'une variable booléenne de contrôle du tableau
-		
-		/*
-		 * Calcul de la valeur booléenne qui contrôle le tableau de la sorte :
-		 * - elle vaut true si le tableau a au moins 1 élément et si le premier élément ou le
-		 * 	dernier élément vaut 6
-		 * - elle vaut false dans les autres cas
-		 * 
-		 */
-		if (array.length >= 1 && (array[0] == 6 || array[array.length-1] == 6)) {
-			control = true;
-		}
-		else {
-			control = false;
-		}
-		System.out.println(control);
 
+		int[] array = { 52, 58, 8745, 2, -8548, 56, 6 };
+
+		/*
+		 * On calcule une valeur boolÃ©enne qui contrÃ´le le tableau de la sorte : o elle
+		 * vaut true si le tableau a au moins 1 Ã©lÃ©ment et si le premier Ã©lÃ©ment ou le
+		 * dernier Ã©lÃ©ment vaut 6. o elle vaut false dans les autres cas
+		 */
+		boolean b = array.length > 0 && ((array[0] == 6) || (array[array.length - 1] == 6));
+
+		System.out.println(b);
 	}
 
 }

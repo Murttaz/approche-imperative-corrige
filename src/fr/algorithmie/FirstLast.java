@@ -2,25 +2,24 @@ package fr.algorithmie;
 
 public class FirstLast {
 
+	/*
+	 * Calcul de la valeur boolï¿½enne qui contrï¿½le le tableau de la sorte : - elle
+	 * vaut true si le tableau est de longueur strictement supï¿½rieure ï¿½ 1 et que le
+	 * premier et le dernier ï¿½lï¿½ment du tableau ont la mï¿½me valeur - elle vaut false
+	 * dans les autres cas
+	 * 
+	 */
 	public static void main(String[] args) {
-		
-		int[] array = {4,3,6,1,4};
-		boolean control = true; // initialisation d'une variable booléenne de contrôle du tableau
-		
-		/*
-		 * Calcul de la valeur booléenne qui contrôle le tableau de la sorte :
-		 * - elle vaut true si le tableau est de longueur strictement supérieure à 1 et que le
-		 * 	premier et le dernier élément du tableau ont la même valeur
-		 * - elle vaut false dans les autres cas
-		 * 
-		 */
-		if (array.length > 1 && (array[0] == array[array.length-1])) {
-			control = true;
+		// DÃ©claration tableau d'entiers
+		int[] tab1 = { 3, 6, 8, 4, 8, 3 };
+		boolean marqueur = false;
+
+		// Si dÃ©tection tableau 1er et dernier Ã©lÃ©ments Ã©gaux, marqueur = true
+		if ((tab1.length > 0) && (tab1[0] == tab1[tab1.length - 1] && tab1[tab1.length - 1] == tab1[0])) {
+			marqueur = true;
 		}
-		else {
-			control = false;
-		}
-		System.out.println(control);
+		// Inutile de faire un esle, le marqueur est false par dÃ©faut
+		System.out.println("Etat du boolean : " + marqueur);
 
 	}
 

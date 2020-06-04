@@ -6,25 +6,21 @@ import java.util.Scanner;
 public class InteractifChiffresSuivants {
 
 	public static void main(String[] args) {
-		
-		// Création de la variable saisie de type Scanner
-		Scanner saisie = new Scanner(System.in);
-		
-		// On demande à l'utilisateur de saisir une valeur au clavier
-		System.out.println("Veuillez saisir un nombre et appuyer sur la touche Return :");
-		
-		// Stockage de la valeur saisie par l'utilisateur dans la variable nb
-		int nb = saisie.nextInt();
-		
-		// Fermeture de la saisie
-	    saisie.close();
-			
-		// Affichage des 10 nombres suivant la valeur saisie par l'utilisateur
-	    int i = 1; // index de parcours du tableau
-	    while (i <= 10) {
-	    	System.out.println(nb + i);
-	    	i++;
-	    }
+
+		// Utilisation du scanner
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Quel est votre chiffre?");
+
+		// On enregistre le choix de l'utilisateur
+		int choix = sc.nextInt();
+		System.out.println("Vous avez selectionnÃ© le chiffre : " + choix + "\n");
+		System.out.println("Voici les 10 nombres qui suivent le votre :");
+		sc.close();
+
+		// On affiche les 10 chiffres qui suivent la selection.
+		for (int i = 1; i <= 10; i++) {
+			System.out.println("-> " + (choix + i) + "\n");
+		}
 
 	}
 
